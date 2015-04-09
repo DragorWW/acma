@@ -1,0 +1,103 @@
+@import "font-awesome/font-awesome";
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+
+body {
+    #main-wrap {
+      margin-left: 19px;
+    }
+    .task {
+        box-shadow: none !important;
+    }
+    .nav-panel {
+      position: absolute;
+      z-index: 1000;
+      left: -68px;
+      transition: 250ms left ease-in;
+      &:hover {
+        left: 0;
+      }
+    }
+    .button.green {
+        background: #bdd96c;
+    }
+    .button.grey {
+        background: #eaeaea;
+    }
+    .tasks .tasks-inner .task input.btn,
+    .tasks .tasks-inner .task a.btn {
+        background: #E5E5E5;
+    }
+
+    #taskStatus1 {
+        background: #86BEE7;
+    }
+    #taskStatus2 {
+        background: #80D87D;
+    }
+    #taskStatus3 {
+        background: #ED7777;
+    }
+    #taskStatus4 {
+        background: #D8D8D8;
+    }
+    .kanban-devider {
+        width: 0;
+    }
+    .kanban-column {
+        width: 25%;
+    }
+    .kanban-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #j_tasksList {
+    height: 100%;
+    }
+    .page-header.tasks-filter {
+        padding: 0 20px;
+    }
+    .toggle-filter {
+        .fa;
+        &:before {
+            content: @fa-var-eye;
+            background: none;
+            left: 7px;
+            top: 2px;
+            font-size: 17px;
+            width: auto;
+            height: auto;
+        }
+    }
+    .refresh-page {
+        .fa;
+        &.active:before {
+            animation: rotating 500s linear infinite;
+            background: none;
+        }
+        &:before {
+            content: @fa-var-refresh;
+            background: none;
+            left: 22px;
+            top: 2px;
+            font-size: 17px;
+            width: auto;
+            height: auto;
+        }
+    }
+    .action-color-31:before {
+        background-color: #FFFDE8 !important;
+    }
+}
+
+
+
